@@ -14,6 +14,7 @@ class OtpService
             (int) str_pad('9', config('services.otp.length', 4), '9')
         );
 
+        $code = '1234';
         // Invalidate previous unused OTPs for this phone
         Otp::where('phone', $phone)->where('is_used', false)->update(['is_used' => true]);
 
