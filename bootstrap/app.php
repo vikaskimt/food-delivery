@@ -18,7 +18,7 @@ return Application::configure(basePath: dirname(__DIR__))
 
         // Sanctum stateful API middleware for the customer-facing SPA/PWA if
         // you decide to use cookie-based auth instead of bearer tokens.
-        $middleware->statefulApi();
+        //$middleware->statefulApi();
     })
     ->withExceptions(function (Exceptions $exceptions) {
         //
